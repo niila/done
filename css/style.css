@@ -14,8 +14,8 @@ YAY
   padding: 30px;
   margin-bottom: 15px;
   border: 0px solid #333333; 
-  border-radius:15px;
-  -moz-border-radius:15px; /* Firefox 3.6 and earlier */
+  border-radius:10px;
+  -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
 #header h1 {
@@ -57,8 +57,8 @@ p {
 .pic {
   margin-bottom: 20px; 
   border:1px solid;
-  border-radius:15px;
-  -moz-border-radius:15px; /* Firefox 3.6 and earlier */
+  border-radius:10px;
+  -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
 
@@ -70,8 +70,8 @@ p {
   background: #DEDEDE;
   padding: 15px;
   margin: 50px;  
-  border-radius:15px;
-  -moz-border-radius:15px; /*** Firefox 3.6 > ***/
+  border-radius:10px;
+  -moz-border-radius:10px; /*** Firefox 3.6 > ***/
   }
 
 #content .post {
@@ -81,8 +81,8 @@ p {
   padding: 35px;
   margin-bottom: 10px;
   border: 1px solid #333333;
-  border-radius:15px;
-  -moz-border-radius:25px; /*** Firefox 3.6 > ***/
+  border-radius:10px;
+  -moz-border-radius:10px; /*** Firefox 3.6 > ***/
 }
 
 #content .post h3 {
@@ -139,7 +139,7 @@ a:active {text-decoration: none;color:#F5D60C;}   /* selected link YELLOW */
   padding: 15px 35px;
   margin: 40px 40px;
   border:1px solid;
-  border-radius: 15px;
+  border-radius: 10px;
   text-transform: uppercase;
 }
 
