@@ -51,7 +51,7 @@ body {
 
 p {
   line-height: 1.5em;
-  color: #333333;
+  color: #6B4E6B;
 }
 
 .pic {
@@ -156,8 +156,8 @@ a:active {text-decoration: none;color:#F5D60C;}   /* selected link YELLOW */
 }
 
 #nav li {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1em;
+  /*font-weight: bold;
 }
 
 
