@@ -3,24 +3,24 @@
 
 <script>
 
-var width = 1265,
-    height = 783,
-    depth = 2000,
+var width = 500,
+    height = 500,
+    depth = 500,
     n = 30,
     c = 30;
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .style("background", "#FAD400");
+    .style("background", "#d1d1d1");
 
-var boids = d3.range(0, 80).map(Boid);
+var boids = d3.range(0, 100).map(Boid);
 
 var circles = svg.selectAll("circle")
     .data(boids)
     .enter().append("circle")
     .attr("fill", "#000")
-    .attr("fill-opacity", 0.3);
+    .attr("fill-opacity", 0.1);
 
 d3.timer(function() {
     circles
@@ -30,8 +30,7 @@ d3.timer(function() {
         .attr("r", function(d) { return d.l.z / 10; });
 });
 
-// Thank you: http://jfire.io/animations/2014-12-31/
-   // Ported from http://harry.me/blog/2011/02/17/neat-algorithms-flocking/ by Harry Brundage
+// Ported from http://harry.me/blog/2011/02/17/neat-algorithms-flocking/ by Harry Brundage
 
 function Vector(x, y, z) {
     this.x = x || 0;
@@ -87,13 +86,13 @@ Vector.subtract = function(a, b) {
     return new Vector(a.x, a.y, a.z).subtract(b);
 }
 
-var DESIRED_SEPARATION = 5,
-    NEIGHBOR_RADIUS    = 1000,
-    MAX_SPEED          = 0.6,
-    MAX_FORCE          = 5.5,
-    SEPARATION_WEIGHT  = 1,
-    ALIGNMENT_WEIGHT   = 100,
-    COHESION_WEIGHT    = 10000;
+var DESIRED_SEPARATION = 20,
+    NEIGHBOR_RADIUS    = 50,
+    MAX_SPEED          = 2,
+    MAX_FORCE          = 0.5,
+    SEPARATION_WEIGHT  = 2,
+    ALIGNMENT_WEIGHT   = 1,
+    COHESION_WEIGHT    = 1;
 
 function Boid() {
     var v = new Vector(Math.random()*2 - 1, Math.random()*2 - 1, Math.random()*2 - 1),
