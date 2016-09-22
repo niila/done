@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<title>20 years of UFO sightings</title>
 <style> /* set the CSS */
 
 body { 
@@ -23,7 +24,7 @@ path {
 div.tooltip {
   position: absolute;   
   text-align: center;   
-  width: 96px;  
+  width: 99px;  
   height: 25px;     
   padding: 5px; 
   font: 12px sans-serif;    
@@ -61,7 +62,7 @@ h1 {
 </style>
 
 <body>
-<h1>30 years of UFO sightings</h1>
+<h1>20 years of UFO sightings</h1>
 
 <!-- load the d3.js library -->    
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -74,8 +75,8 @@ var margin = {top: 20, right: 20, bottom: 30, left: 70},
     height = 370 - margin.top - margin.bottom;
 
 // Parse the date / time
-var parseDate = d3.time.format("%b-%y").parse;
-var formatTime = d3.time.format("%B");// Format tooltip date / time
+var parseDate = d3.time.format("%b-%Y").parse;
+var formatTime = d3.time.format("%B %Y");// Format tooltip date / time
 
 // Set the ranges
 var x = d3.time.scale().range([0, width]);
@@ -135,10 +136,10 @@ d3.csv("data.csv", function(error, data) {
     // Tooltip stuff
     .on("mouseover", function(d) {        
         div.transition()
-        .duration(500)   
+        .duration(200)   
         .style("opacity", 0);    
     div.transition()
-        .duration(200)    
+        .duration(900)    
         .style("opacity", .96);    
         div .html('<a href= "'+d.link+'" target="_blank">' + //with a link
         formatTime(d.date) + "</a>" + "<br/>" + d.ufo)     
@@ -161,9 +162,10 @@ d3.csv("data.csv", function(error, data) {
 
 </script>
 
-<p>There is of course a good explanation <a href="http://www.theatlantic.com/technology/archive/2014/06/the-hard-data-on-ufo-sightings-its-mostly-drunk-people-in-the-west/373645/" target="_blank">why people might see UFO's </a>, but the fact is that over 95,000 times in the last 30 years the hot line was called or the web form filled out with an observation that could not always be easily explained. The National UFO Reporting Center based in Davenport, Washington - <a href="http://www.nuforc.org/" target="_blank">NUFORC</a> has been collecting data since 1974 and if the <a href="https://www.graphiq.com/vlp/8FOFfMGJhe5" target="_blank">population density</a> is taken into account, the west coast seems the spot most likely to encounter the blinking lights. The warmer months, with 4th of July being the busiest day for sightings, are obvioulsly a better time to watch the sky than a freezing winter night, but with the yearly <a href="https://en.wikipedia.org/wiki/Leonids" target="_blank">Leonid</a> meteor showers in November there also is a peak to be seen. The 1999 event made the NUROC record for the 90's with a very beautiful brilliant fireball <a href="https://science.nasa.gov/science-news/science-at-nasa/1999/ast17nov99_1/" target="_blank">according to witnesses</a>. Another much noticed, explainable event had been a navy <a href="http://www.sandiegouniontribune.com/news/crime-courts-fire/sdut-mystery-light-sky-military-navy-drill-2015nov07-htmlstory.html" target="_blank">Missile Launch November 2015</a>. 
+<p>There is of course a good explanation <a href="http://www.theatlantic.com/technology/archive/2014/06/the-hard-data-on-ufo-sightings-its-mostly-drunk-people-in-the-west/373645/" target="_blank">why people might see UFO's </a>, but the fact is that over 95,000 times in the last 20 years the hot line was called or the web form filled out with an observation that could not always be easily explained. The National UFO Reporting Center based in Davenport, Washington - <a href="http://www.nuforc.org/" target="_blank">NUFORC</a> has been collecting data since 1974 and if the <a href="https://www.graphiq.com/vlp/8FOFfMGJhe5" target="_blank">population density</a> is taken into account, the west coast seems the spot most likely to encounter the blinking lights. The warmer months, with 4th of July being the busiest day for sightings, are obvioulsly a better time to watch the sky than a freezing winter night, but with the yearly <a href="https://en.wikipedia.org/wiki/Leonids" target="_blank">Leonid</a> meteor showers in November there also is a peak to be seen. The 1999 event made the NUROC record for the 90's with a very beautiful brilliant fireball <a href="https://science.nasa.gov/science-news/science-at-nasa/1999/ast17nov99_1/" target="_blank">according to witnesses</a>. Another much noticed, explainable event had been a navy <a href="http://www.sandiegouniontribune.com/news/crime-courts-fire/sdut-mystery-light-sky-military-navy-drill-2015nov07-htmlstory.html" target="_blank">Missile Launch November 2015</a>. 
 
-There still are events that defy any pattern and are being explored by <a href="http://metrocosm.com/map-of-ufo-sightings/" target="_blank">enthusiasts</a> for further enjoyment.</p>
+There still are events that defy any pattern and are being explored by <a href="http://metrocosm.com/map-of-ufo-sightings/
+" target="_blank">enthusiasts</a> for further enjoyment.</p>
 
 <p>(mouse over a dot for counts and a link for details)</p>
 
